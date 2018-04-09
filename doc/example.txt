@@ -1,0 +1,30 @@
+func greeting()
+    if get("already_greeted")
+        "You again?"
+        "What are you doing here?"
+        choice
+            "Talk":
+                "I just want to talk"
+            "Fight":
+                "Rawr"
+        end
+    else
+        "Hi!"
+        set("already_greeted", true)
+    end
+end
+
+func rumor()
+    "Have you heard of that cool new thing?"
+end
+
+func npc
+    greeting()
+
+    choice:
+        "Rumor"
+            rumor()
+        "Talk"
+            "Blablabla"
+    end
+end

@@ -1,0 +1,16 @@
+CHAR ::= Any unicode character encoded as UTF-8
+
+STRING_LITERAL ::= '"' + CHAR* + '"'
+
+BOOLEAN_LITERAL ::= "true"|"false"
+
+END = ::= "end"
+
+IDENTIFIER ::= CHAR+
+
+FUNC_CALL ::= IDENTIFIER + "()"|
+    IDENTIFIER + "(" + IDENTIFIER + ["," + IDENTIFIER]* + ")"
+
+EXPRESSION ::= BOOLEAN_LITERAL | STRING_LITERAL | FUNC_CALL
+
+FUNC_DEF ::= "func" + IDENTIFIER + EXPRESSION* + END
