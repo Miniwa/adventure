@@ -1,0 +1,4 @@
+rule PlayerSeesCat
+    query["closest_animal_type"] == "cat" && query["closest_animal_distance"] < 5
+    say "Cute!"
+end

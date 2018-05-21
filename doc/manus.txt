@@ -1,0 +1,72 @@
+1:
+Hej på er.
+Språket jag byggt heter alltså ruler.
+Inte av storhetsvansinne utan för att grundpelaren i språket är regler (engelska "rule"), och
+skrivet i ruby.
+Idén jag hade för språket var ett verktyg åt speldesignare för att bygga interaktioner
+mellan karaktärer och spelvärld i ett dataspel, framförallt dialog mellan karaktärer.
+Krav att vara oberoende av motor och runtime.
+Krav att vara lätt.
+
+Insåg ganska snabbt att ett system som kan hantera all form av interaktion behövde vara komplext.
+T.ex för att skapa dialog i för ett uppdrag behövs variabler, state, övergångar, uppdatera uppdragslogg.
+Mer komplicerat om man vill kunna hantera animationer, ljudsynk.
+Någonstans tänkte jag att det kanske är för komplicerat för den medelmåttige speldesignern.
+
+
+2:
+Minskade ner målet med språket och valde att fokusera på dynamiska interaktioner.
+Mer spontana, t.ex spelaren följer en stig och råker se en katt som också går på stigen.
+Spelaren utbrister "Oj vilken söt katt!".
+
+För att åstadkomma såna interkationer tänkte jag mig ett system bestående helt och hållet av regler.
+En regel har ett villkor som antingen är sant eller falskt, och en antal actions (handlingar)
+som ska köras ifall villkoret för regeln är sant.
+Förra exemplet med katten kan man tänka sig en regel: ifall söt katt inom 5m, säg "Söt!".
+Behöver komma åt information om spelvärlden, t.ex vart närmsta katt befinner sig.
+
+
+3:
+Bygger upp en faktatabell, där varje fakta har en unik nyckel av typ string och ett
+värde av typen integer, string eller boolean.
+
+[visa kod för att fylla i fakta]
+Faktatabellen vanlig ruby dictionary som fylls i med Ruler objekt.
+
+[visa exempel kod]
+Här är en regel med villkor
+Actions som kommer köras ifall villkoret är sant
+[visa action definitioner]
+
+[visa andra exemplet med koncept]
+Ett koncept är ett namngivet villkor.
+Poängen är att designers ska slippa skapa krångliga villkor själva och istället använda
+mer lätthanterliga koncept.
+En regel kan ha oändligt med actions, och actions kan göra vad som helst i runtimen.
+Det som gör språket flexibelt nog till alla spelmotorer.
+
+
+4:
+På tekniska sidan består språket av en lexer, parser och runtime.
+Lexern och parsern tolkar kod man stoppar in och spottar ut ett ruler kontext.
+Kontextet innehåller alla regler och koncept.
+Villkoren är uppbyggda som ett syntaxträd och kan exekveras för att få ut en boolean värde.
+I kontextet definerar man också actions och lägger till fakta och sedan kan kontextet själv exekveras.
+En exekvering går igenom villkoren för alla regler och kör de regler vars villkor är sant.
+
+
+5:
+Vill prata lite om problem jag stött på.
+För det första, design på språket. Balansera mellan flexibilitet, hur lätt språket ska vara att använda.
+Om man fokuserar mer på det ena lider nåt annat.
+
+Tyckte också det var svårt att få till ett bra interface, framförallt bra felmeddelanden och
+felhantering som gör språket lätt att hantera utanför själva programmeringen.
+
+Annars tycker jag språket blev rätt bra, som en proof of concept åtminstone.
+Inte riktigt lika kraftfullt som jag hade hoppats, t.ex skulle jag vilja ha regler
+som är beroende av andra regler för att skapa branschande dialog beroende på visas parametrar
+men det får bli nästa version.
+
+6:
+Som en sista punkt vill jag tacka för att ni lyssnade, och hoppas ni fick ut nåt av det.
