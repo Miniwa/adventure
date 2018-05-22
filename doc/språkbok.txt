@@ -1,0 +1,54 @@
+1:
+Undvik "frivillig" syntax. T.ex ruby har frivilliga paranteser vid funktionsanrop.
+Välj det ena eller det andra och "stick with it".
+
+2:
+Bakåtkompabilitet är naturligtvis bra när kod behöver fungera i många år framöver.
+Men ta en funderare om det behövs till 100%, se C++ och i vissa fall Java som
+skräckexempel på vad som kan hända.
+
+3:
+Gör det enkelt att anänvda andras kod.
+
+4:
+Verktyg är nästan lika viktigt som språket själv, se Java.
+
+5:
+Få till felhanteringen från början, märks tydligt vilka språk som designat sitt
+språk och sedan kommit på "hoppsan saker och ting kan ju gå fel också".
+
+6:
+Ett välfyllt standardbibliotek med BRA kod är mycket viktigt.
+
+7:
+Välj en eller ett par paradigmer och håll dig till dom.
+
+8:
+Föredra lättläst framför effektivt att parsa (tittar på dig Rust).
+
+9:
+Försök få syntaxen att likna gamla språk som mycket som möjligt, människor föredrar
+det dom redan är vana vid.
+
+10:
+Bra dokumentation är ett måste om någon ska använda språket i framtiden.
+
+11:
+Lyssna på vad användarna säger ock tycker. Det är trots allt dom ska använda språket i slutändan.
+
+12:
+Open-sourca källkoden. Desto ler ögon desto mindre buggar och oklarheter (i min åsikt).
+
+13:
+Använd keywords istället för symboler. Smaksak som kan debatteras men jag skulle föredra
+"for int i in numbers" framför "for int i : numbers".
+
+14:
+Absolut inga tvetydigheter. Borde vara uppenbart men finns många skräckexempel, särskilt
+inom otypade språk som javascript, python och ruby.
+
+15:
+Tänk på multitrådning och asynkronitet från början, även här finns exempel där man
+fått lägg atill stöd för det i efterhand. Kommer bara bli viktigare och viktigare i framtiden.
+
+16:
