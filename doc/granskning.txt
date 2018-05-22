@@ -1,7 +1,7 @@
 Språket:
 Menat som ett träningsspråk för att öva på typning av variabler, för det ändamålet bra.
 Inte så mycket avancerade grejer som kan förvirra användaren, typ template, macros o.s.v.
-Gillar att ni fick med array typ.
+Gillar att dom fick med array typ.
 Syntax är bra, likt C/C++ vilket var målet.
 Användarhandledning tillsammans med dokumentation och exempel är absolut tillräcklig
 för att kunna skriva kod i språket.
@@ -9,13 +9,13 @@ för att kunna skriva kod i språket.
 
 Beskriving och grammatik:
 Grammatiken bra överlag, inga onödiga regler.
-Inbyddga funktioner kanske hade varit bättre att göra till vanliga funktionsanrop som en del av ett standardbibliotek.
+Inbyggda funktioner kanske hade varit bättre att göra till vanliga funktionsanrop som en del av ett standardbibliotek.
 Misstänker att anledningen var att få det och fungera med olika typer.
 Ordning på matematiska operationer inte inbyggt i grammatiken utan sköts i parsningen.
 
 Verktyg:
 Använder rdparse.
-Såvitt jag kan se, inga konstigheter utan används på rätt sätt.
+Såvitt jag kan se inga konstigheter utan används på rätt sätt.
 En begränsning är seg parsning.
 
 Implementering:
@@ -24,16 +24,14 @@ Kodklasser stämmer bra överrens med konstruktioner i grammatiken.
 Bra kod kvalitet, bra variabel och klass namn. Hade kunnat tjäna på lite mer dokumentation.
 Speciellt i vissa specialfall där typer castas till andra typer och liknande.
 
-Mycket kodupprepning. Ni hade kunnat tjäna på att skriva funktioner för att kolla typer på klasser,
+Mycket kodupprepning. Dom hade kunnat tjäna på att skriva funktioner för att kolla typer på klasser,
 casta klasser till andra typer samt ärva klasser från varandra för att slippa copy paste.
 T.ex ADD och SUBTRACT, MULTIPLY OCH DIVIDE.
 
 
-
 Kodstandard:
-Följer en intern standard, stor bokstav i början på variabler och keywords t.ex.
-"$" som prefix på variabler, smaksak men jag tycker inte dett tillför så mycket.
-I alla fall konsekventa så får plus på det.
+Följer en intern standard, stor bokstav i början på variabler och keywords t.ex
+och är konsekventa med standarden.
 
 
 Testkörning:

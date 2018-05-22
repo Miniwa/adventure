@@ -37,7 +37,7 @@ Bra dokumentation är ett måste om någon ska använda språket i framtiden.
 Lyssna på vad användarna säger ock tycker. Det är trots allt dom ska använda språket i slutändan.
 
 12:
-Open-sourca källkoden. Desto ler ögon desto mindre buggar och oklarheter (i min åsikt).
+Open-sourca källkoden. Desto fler ögon desto mindre buggar och oklarheter (i min åsikt).
 
 13:
 Använd keywords istället för symboler. Smaksak som kan debatteras men jag skulle föredra
@@ -52,3 +52,21 @@ Tänk på multitrådning och asynkronitet från början, även här finns exempe
 fått lägg atill stöd för det i efterhand. Kommer bara bli viktigare och viktigare i framtiden.
 
 16:
+Tänk efter om otypad verkligen är värt det. Visst går det snabbare att skriva, men man förlorar
+också tid på att fixa fler buggar, kanske eventuellt på att skriva fler tester.
+Även många analysverktyg som kräver stark typning.
+
+17:
+Fundera på om det är värt besväret att skriva egen lexer/parser.
+Finns många bra verktyg som förenklar processen utan att behöva offra särskilt mycket.
+
+18:
+Släpp ett test bibliotek tillsammans med språket, uppmuntra användare till att skriva tester.
+
+19:
+Begränsa "scopet". Fundera på användningsfall och vilka funktioner som verkligen behövs.
+Inte lägga ner mycket tid på sånt som kommer användas lite.
+
+20:
+Fundera på om du verkligen behöver ett språk/DSL. Ibland kan en vanlig konfigureringsfil vara enklare.
+Rätt verktyg för rätt problem.
